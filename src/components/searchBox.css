@@ -1,0 +1,36 @@
+input {
+  padding: 7px;
+  max-width: 250px;
+    background: radial-gradient(
+    circle,
+    #ff2400 0%,
+    #e81d1d 12.5%,
+    #e8b71d 25%,
+    #e3e81d 37.5%,
+    #1de840 50%,
+    #1ddde8 62.5%,
+    #2b1de8 75%,
+    #dd00f3 87.5%,
+    #dd00f3 100%
+  );
+  background-size: 2000% 2000%;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  transition: 0.1s ease;
+  outline: 0px solid burlywood;
+  animation: gradient 60s ease infinite;
+  color: #fff;
+}
+
+input:focus {
+  transition: 0.1s;
+  color: #0a0a0a;
+  outline: 3px solid burlywood;
+}
+
+@media screen and (min-width: 510px) {
+    input{
+        width: 250px;
+    }
+}
