@@ -1,5 +1,5 @@
 import './navbar.css'
-import SearchBox from './searchBox'
+import SearchBox from '../SearchBox/searchBox'
 
 const Navbar = () => {
     return (<nav>
