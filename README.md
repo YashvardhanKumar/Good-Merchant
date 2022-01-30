@@ -2,6 +2,74 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## installation
+
+```bash
+npm install
+```
+
+## Getting Started
+
+### Collaborating
+
+1. Clone this repo
+
+```bash
+git clone git@github.com:YashvardhanKumar/Good-Merchant.git
+```
+
+or if you're using HTTPS
+
+```bash
+git clone https://github.com/YashvardhanKumar/Good-Merchant.git
+```
+
+2. CD into the repo
+
+```bash
+cd Good-Merchant
+```
+
+3. Create a new branch to make new changes
+
+```bash
+git checkout -b <BRANCH NAME>
+```
+
+4. Add and commit changes locally
+
+```bash
+git add . && git commit -m "<COMMIT MESSAGE>"
+```
+
+5. Push to repo
+
+```bash
+git push -u origin <BRANCH NAME>
+```
+
+6. Go to [repo page](https://github.com/YashvardhanKumar/Good-Merchant) and click
+   `Compare and Pull Request` on your branch to create a new pull request
+
+7. Wait for reviewer to review and merge the pull requests to the master branch
+
+8. Delete merged branches from your local repo
+
+```bash
+git checkout master
+git remote prune origin
+```
+
+9. Pull the repo frequently to sync your local repo to remote repo.
+
+```bash
+git pull
+git remote prune origin
+git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
+```
+
+10. Go back to step 3 to start making changes again
+
 ## Available Scripts
 
 In the project directory, you can run:
