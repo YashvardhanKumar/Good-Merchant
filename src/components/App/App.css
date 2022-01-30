@@ -1,18 +1,11 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: Poppins;
+}
 body {
-  background: radial-gradient(
-    circle,
-    #ff2400 0%,
-    #e81d1d 12.5%,
-    #e8b71d 25%,
-    #e3e81d 37.5%,
-    #1de840 50%,
-    #1ddde8 62.5%,
-    #2b1de8 75%,
-    #dd00f3 87.5%,
-    #dd00f3 100%
-  );
-  background-size: 2000% 2000%;
-  animation: gradient 60s ease infinite;
   height: 100vh;
 }
 @keyframes gradient {
@@ -35,4 +28,6 @@ body {
 .container {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }

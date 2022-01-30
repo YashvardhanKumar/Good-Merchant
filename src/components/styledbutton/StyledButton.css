@@ -1,0 +1,40 @@
+.image-search,
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.7px;
+
+  min-width: 33px;
+  min-height: 33px;
+
+  background: rgba(145, 107, 191, 0.55);
+  border: 1px solid #916bbf;
+  box-sizing: border-box;
+  border-radius: 7px;
+  transition: 0.5s ease;
+}
+.btn:hover,
+.image-search:hover {
+  background: rgba(145, 107, 191, 0.77);
+  color: #d0d0d0;
+  transition: 0.5s ease;
+}
+
+.image-search:hover > svg,.btn:hover > svg{
+    fill: #d0d0d0;
+  transition: 0.5s ease;
+}
+
+.btn:active,
+.image-search:active {
+  background: rgba(145, 107, 191, 1);
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.btn:active > *,
+.image-search:active > *{
+    fill: #ffffff;
+    transition: 0.5s ease;
+}

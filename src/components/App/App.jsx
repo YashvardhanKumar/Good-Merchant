@@ -1,11 +1,15 @@
 import logo from '../../logo.svg';
 import './App.css';
 import Navbar from '../navbar/navbar';
+import Background from '../background/background';
+import CardView from '../cardview/cardview';
 
 function App() {
   return (
-    <div className='container'>
-      <Navbar/>
+    <div className='container' id='container'>
+      <CardView />
+      <Navbar />
+      <Background />
     </div>
   );
 }
