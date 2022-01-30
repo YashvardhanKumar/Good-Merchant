@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from '../navbar/navbar';
 import Background from '../background/background';
 import CardView from '../cardview/cardview';
+import React from 'react'
 
 function App() {
   return (

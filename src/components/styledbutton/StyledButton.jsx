@@ -1,4 +1,5 @@
 import './StyledButton.css'
+import React from 'react'
 
 const StyledButton = (props) => {
     return (

@@ -1,6 +1,6 @@
 import StyledButton from '../styledbutton/StyledButton'
 import './searchBox.css'
-
+import React from 'react'
 
 const SearchBox = () => {
     return (

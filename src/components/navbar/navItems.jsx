@@ -18,7 +18,6 @@ function NavItems() {
             window.removeEventListener('resize', changeWidth)
         }
     }, [])
-
     return (
         <div className="nav">
             
