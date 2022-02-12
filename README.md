@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+In this project the user will be able to Upload images of objects and we will give them the cheapest price that object is available for, on the internet
+
 ## installation
 
 ```bash
