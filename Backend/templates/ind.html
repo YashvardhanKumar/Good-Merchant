@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model</title>
+</head>
+<body>
+    <p>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <p>
+                    {%for message in messages%}
+                        <p>{{message}}</p>
+                    {%endfor%}
+                </p>
+            {%endif%}
+        {%endwith%}
+    </p>
+    <form action="/qimage" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file"/>
+        <button>Submit</button>
+    </form>
+    <p> OR </p>
+    <form action="/qimageurl" method="post">
+        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*"> 
+        <button>Submit</button>
+    </form>
+
+    <br>
+</body>
+</html>

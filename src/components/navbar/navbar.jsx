@@ -1,6 +1,6 @@
 import './navbar.css'
-import SearchBox from '../SearchBox/searchBox'
-import NavItems from './navItems'
+import SearchBox from './SearchBox/searchBox'
+import NavItems from './NavItems/navItems'
 import React from 'react'
 
 const Navbar = () => {
