@@ -2,7 +2,7 @@ import React from "react";
 
 function popup(props) {
   return props.trigger ? (
-    <div>
+    <div className="popup">
       <form method="post" enctype="multipart/form-data">
         <input type="file" name="file" id="file" />
         <button>Submit</button>
@@ -19,6 +19,7 @@ function popup(props) {
         />
         <button>Submit</button> {props.children}
       </form>
+      <button onClick={() => props.setTrigger(false)}>Cancel</button>
     </div>
   ) : (
     ""
