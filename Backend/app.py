@@ -2,7 +2,7 @@ from asyncio.windows_events import NULL
 from importlib.resources import path
 import re
 from werkzeug.utils import secure_filename
-from flask import Flask, flash, request, redirect, url_for
+from flask import Flask, flash, request, redirect, send_file, send_from_directory, url_for
 import os
 import imp
 from flask import Flask, jsonify, render_template, request
@@ -31,7 +31,7 @@ def allowed_file(filename):
 @app.route('/searchimage')
 def image():
     if request.method == 'GET':
-        return render_template('ind.html')
+        return send_file('../public/index.html')
 
 
 @app.route('/qimage', methods=['POST'])

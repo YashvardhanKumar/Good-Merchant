@@ -3,7 +3,7 @@ import React from 'react'
 
 const StyledButton = (props) => {
     return (
-        <button className='btn'>{props.buttonText}</button>
+        <button className={"btn " + props.className} onClick={props.onClick}>{props.children}</button>
     )
 }
 
