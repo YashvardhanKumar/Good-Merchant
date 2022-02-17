@@ -5,8 +5,9 @@
   justify-content: center;
   margin: 0.7px;
 
-  min-width: 33px;
-  min-height: 33px;
+  /* min-width: 33px; */
+  padding: 7px;
+  /* min-height: 33px; */
 
   background: rgba(145, 107, 191, 0.55);
   border: 1px solid #916bbf;

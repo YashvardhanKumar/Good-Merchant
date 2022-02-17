@@ -1,0 +1,37 @@
+.category-grid {
+  /* position: absolute; */
+  width: 270px;
+  /* height: min-content; */
+  height: 270px;
+  display: flex;
+  align-items: flex-end;
+  background: url(../../../../../Downloads/ML-Phone_laptop/dataset/test_set/headphones/8.jpg);
+  background-repeat: no-repeat;
+  /* background-size:200%; */
+  border-radius: 10px;
+}
+
+/* text */
+.category-label span {
+  /* position: absolute; */
+  width: 270px;
+  height: 78.59px;
+  /* left: 210px; */
+  /* top: 784.41px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3d2c8d;
+}
+
+/* Rectangle 41 */
+.category-label {
+  /* position: absolute; */
+  width: 270px;
+  /* height: 78.59px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.66);
+  border-radius: 0px 0px 10px 10px;
+}
