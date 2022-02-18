@@ -1,10 +1,16 @@
 import './App.css';
 import React from 'react'
-import Homepage from '../../Pages/Homepage';
+import Category from '../../Pages/Category';
+
+
+
 // import ImageSearch from '../ImageSearching/imagesearch';
 function App() {
   return (
-    <Homepage />
+
+   <Category />
+
+  
   );
 }
 
