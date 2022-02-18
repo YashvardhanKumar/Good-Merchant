@@ -21,7 +21,7 @@
 }
 
 .responsive{
-    display:none;
+    display:none !important;
     color: #1C0C5B;
   }
 .responsive svg{
@@ -91,7 +91,7 @@
       text-align: center;
   }
   .responsive{
-      display: flex;
+      display: flex !important;
       align-items: center;
   }
 }
@@ -117,7 +117,7 @@
   height: 0px;
   left: 1142px;
   top: 66px;
-  border: 0.5px solid #0d4d56;
+  border: 0.5px solid #1C0C5B;
   box-sizing: border-box;
   transform: rotate(-90deg);
 }

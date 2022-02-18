@@ -1,4 +1,4 @@
-form.searchBox {
+.searchBox {
   display: flex;
   padding: 1px;
   background-size: 2000% 2000%;
@@ -9,8 +9,6 @@ form.searchBox {
   animation: gradient 60s ease infinite;
   color: #fff;
 }
-
-
 
 input {
   padding: 7px;
@@ -37,7 +35,6 @@ input:focus {
   color: #0a0a0a;
 }
 
-
 .controls {
   width: max-content;
   position: relative;
@@ -47,13 +44,14 @@ input:focus {
 .controls input {
   width: 100%;
   height: 100%;
-  font-family: Roboto, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Roboto, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding-top: 15px;
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0);
   color: #ffffff;
-  color: #1C0C5B;
+  color: #1c0c5b;
   bottom: 0px;
 }
 
@@ -63,7 +61,7 @@ input:focus {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  color: #1C0C5B50;
+  color: #1c0c5b50;
 }
 
 .controls label::after {
@@ -73,7 +71,7 @@ input:focus {
   bottom: 1px;
   height: 100%;
   width: 100%;
-  border-bottom: 2px solid #1C0C5B;
+  border-bottom: 2px solid #1c0c5b;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
@@ -86,20 +84,17 @@ input:focus {
   transition: all 0.3s ease;
 }
 
-.controls input:focus+.label-1 .input-content,
-.controls input:not(:placeholder-shown)+.label-1 .input-content {
+.controls input:focus + .label-1 .input-content,
+.controls input:not(:placeholder-shown) + .label-1 .input-content {
   transform: translateY(-160%);
-  color: #1C0C5B;
+  color: #1c0c5b;
   font-size: 9px;
-
 }
 
-.controls input:focus+.label-1::after,
-.controls input:not(:placeholder-shown)+.label-1::after {
+.controls input:focus + .label-1::after,
+.controls input:not(:placeholder-shown) + .label-1::after {
   transform: translateX(0%);
 }
-
-
 
 @media screen and (min-width: 900px) {
   input {
@@ -108,12 +103,12 @@ input:focus {
 }
 
 @media screen and (max-width: 600px) {
-  form.searchBox {
+  .searchBox {
     display: none;
   }
 }
 
-form.searchBox {
+.searchBox {
   height: 39px;
 
   background: rgba(201, 150, 204, 0.41);
@@ -121,4 +116,3 @@ form.searchBox {
   box-sizing: border-box;
   border-radius: 8px;
 }
-
