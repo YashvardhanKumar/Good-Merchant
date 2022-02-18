@@ -1,4 +1,5 @@
-import './StyledButton.css'
+import './StyledButton.light.css'
+import './StyledButton.dark.css'
 import React from 'react'
 
 const StyledButton = (props) => {

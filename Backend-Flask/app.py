@@ -31,8 +31,10 @@ def allowed_file(filename):
 @app.route('/searchimage')
 def image():
     if request.method == 'GET':
-        return send_file('../public/index.html')
-
+        return send_file('../build/index.html')
+# @app.errorhandler(404)   
+# def not_found(e):   
+#   return app.send_static_file('../public/index.html')
 
 @app.route('/qimage', methods=['POST'])
 def image_binary():

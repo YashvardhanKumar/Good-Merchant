@@ -1,4 +1,4 @@
-import './background.css'
+import './background.light.css'
 import React from 'react'
 const Background = () => (
     <center>

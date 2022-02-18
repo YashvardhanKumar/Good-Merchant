@@ -7,9 +7,14 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   position: absolute;
-  /* max-height: 500px; */
-  z-index: 200;
-  max-width: 500px;
+  top: 5.5em;
+  max-height: 600px;
+  max-width: 600px;
+  width: 80%;
+  height: 60%;
+  min-width: 300px;
+
+  z-index: 300;
   align-items: center;
   background-color: black;
   color: rgb(28, 12, 91);
@@ -40,7 +45,7 @@ input[type="file"] {
   width: 100%;
 }
 .popup-content label, .popup-content form input {
-    width: 300px !important;
+    /* width: 300px !important; */
     display: flex;
     background-color: rgba(145, 107, 191, 0.24);
     align-items: center;
@@ -48,21 +53,35 @@ input[type="file"] {
     border-radius: 10px;
     padding: 5px;
     margin: 4px;
+    max-width: 600px;
+    width: 90% !important;
 
 }
+
+.popup-content form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 90% !important;
+}
+
 .popup-content form .btn {
-    width: 300px !important;
+    /* width: 300px !important; */
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     padding: 4px;
     margin: 4px;
+    max-width: 600px;
+    width: 90% !important;
 }
 .cancel {
   position: absolute;
   right: 0;
-  top: 0;
+  /* top: 0; */
   display: flex;
   border: none;
   background-color: transparent;
@@ -73,10 +92,21 @@ input[type="file"] {
   color: aliceblue;
 }
 
+@media screen and (max-width: 552px) {
+  .cancel{
+    /* display: none; */
+    position: relative;
+    align-items: center;
+  }
+  .popup-heading{
+    justify-content: space-between;
+    font-size: smaller;
+  }
+}
 
-@media screen and (min-width: 800px) {
-    .popup{
-        width: 600px;
-        height: 600px;
-    }
+.popup-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

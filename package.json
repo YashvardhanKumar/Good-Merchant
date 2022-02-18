@@ -33,13 +33,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start-client": "react-scripts start",
+    "frontend": "react-scripts start",
     "start": "npm run build && (cd server && npm start)",
     "ml": "cd Backend-Flask && flask run --no-debugger",
     "backend": "cd Backend-Express && nodemon app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-ml": "cd Backend && flask test",
+    "test-ml": "cd Backend-Flask && flask test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

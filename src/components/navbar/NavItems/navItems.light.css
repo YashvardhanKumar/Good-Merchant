@@ -16,17 +16,13 @@
   z-index: 100;
 }
 
-.nav-items .searchBox {
-  display: none;
-}
-
 .responsive{
     display:none !important;
     color: #1C0C5B;
   }
 .responsive svg{
-  height: 36px;
-  width: 36px;
+  height: 30px;
+  width: 30px;
 }
 
 /* Sign Up */
@@ -84,7 +80,6 @@
 
   .content:nth-child(1) {
     border-top: 1px solid #1c0c5b;
-    margin-top: 5em;
   }
   .content{
       border-top: 1px solid #1c0c5b;

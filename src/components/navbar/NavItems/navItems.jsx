@@ -1,10 +1,11 @@
-import './navItems.css'
+import './navItems.light.css'
 import SearchBox from '../SearchBox/searchBox'
 import React, { useState, useEffect } from 'react'
 import StyledButton from '../../styledbutton/StyledButton'
+import {Link} from 'react-router-dom'
 
 
-function NavItems() {
+function NavItems(props) {
     const [toggleMenu, setToggleMenu] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
     const toggleNav = () => setToggleMenu(!toggleMenu)
@@ -21,18 +22,18 @@ function NavItems() {
     }, [])
     return (
         <div className="nav">
-            
+
             {(toggleMenu || screenWidth > 800) && (
                 <div className="nav-items">
-                    <SearchBox />
-                    <a className="content" href="#">
+                    {(screenWidth < 600) ? <SearchBox toggleNav={props.toggleNav}/> : ""}
+                    <Link className="content" to="/login">
                         Login
-                    </a>
+                    </Link>
                     <span className="separator">
                     </span>
-                    <a className="content" href="#">
+                    <Link className="content" to="/signup">
                         Sign up
-                    </a>
+                    </Link>
                 </div>
             )}
             <StyledButton className="responsive" onClick={toggleNav}>

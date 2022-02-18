@@ -1,14 +1,13 @@
 import React from "react";
-import StyledButton from "../styledbutton/StyledButton";
-import './Categories.css'
+import headphone from './RAW/3.jpg'
+import './Categories.light.css'
 const Categories = () => {
     return (
         <div className="category-grid">
+            <img src={headphone} alt="" />
             <div className="category-label">
                 <span>foo</span>
             </div>
-            <StyledButton buttonText={"Button"}/>
-            {/* <img src={require("../../../../../Downloads/ML-Phone_laptop/dataset/test_set/headphones/8.jpg").default} alt="" /> */}
         </div>
     )
 }
