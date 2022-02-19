@@ -36,16 +36,16 @@ svg{
   transition: 0.5s ease;
 }
 
-.btn:focus,
-.image-search:focus {
+.btn:active,
+.image-search:active {
   background: rgba(61, 44, 141, 1);
   color: #ffffff;
   transition: 0.5s ease;
   border-radius: 7px;
 }
 
-.btn:focus > *,
-.image-search:focus > * {
+.btn:active > *,
+.image-search:active > * {
   fill: #ffffff;
   transition: 0.5s ease;
 }

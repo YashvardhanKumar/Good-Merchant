@@ -1,17 +1,97 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import StyledButton from "../styledbutton/StyledButton";
 import './popup.light.css'
 import './popup.dark.css'
-function popup(props) {
-  useEffect(() => {
-    const article = { title: 'React POST Request Example' };
-    axios.post('https://localhost:5000/qimage', article)
-      .then(response => this.setState({ articleId: response.data.id }))
-      .catch(error => {
-        this.setState({ errorMessage: error.message });
-        console.error('There was an error!', error);
-      });
-  }, []);
+function Popup(props) {
+  let [imageFile, setimageFile] = useState({})
+  let [isFile, setIsFile] = useState(false)
+  let [urlInput, seturlInput] = useState({
+    url: ""
+  })
+
+  const onAddFile = (event) => {
+    event.target.value = null
+    setimageFile(event.target.files[0])
+    if (event.target.files[0] === null) {
+      setIsFile(false)
+    }
+    else {
+      setIsFile(true)
+    }
+  }
+  const onAddUrl = (event) => {
+    const { value, name } = event.target
+    seturlInput(() => {
+      if (name === 'url') {
+        return { url: value }
+      }
+    })
+  }
+
+  const handleSubmitFile = (event) => {
+    event.preventDefault()
+    // var myHeaders = new Headers();
+    // myHeaders.append("Cookie", "session=.eJyrVopPy0kszkgtVrKKrlZSKAFSSrmpxcWJ6alKOkp--QppmTmpCgWJRSVKsbU6I0pFbC0AhL5cIA.YhFNSQ.aM-CI_0z8avhaT6gRDWyTcxQG28");
+
+    // var formdata = new FormData();
+    // formdata.append("file", imageFile.files[0], "");
+    // var requestOptions = {
+    //   method: 'POST',
+    //   headers: myHeaders,
+    //   body: formdata,
+    //   redirect: 'follow'
+    // };
+
+    // fetch("http://localhost:5000/qimage", requestOptions)
+    //   .then(response => response.text())
+    //   .then(result => console.log(result))
+    //   .catch(error => console.log('error', error));
+    if (imageFile.files.length == 0) {
+      console.log(`No files chosen`);
+      return;
+    }
+
+    // assume only one file - read it, and when it's ready, upload to google drive
+    const file = imageFile.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      console.log(`File loaded locally - uploading`)
+      fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=media', {
+        method: 'POST',
+        headers: {
+          'Content-Type': file.type,
+          'Content-Length': file.size
+        },
+        body: reader.result
+      })
+        .then(data => data.json())
+        .then(console.log)
+        .catch(console.error)
+    }
+    reader.readAsArrayBuffer(file);
+
+  }
+
+  const handleSubmitUrl = (event) => {
+    event.preventDefault()
+    var myHeaders = new Headers();
+    myHeaders.append("Cookie", "session=.eJyrVopPy0kszkgtVrKKrlZSKAFSSrmpxcWJ6alKOkp--QppmTmpCgWJRSVKsbU6Q0ZFbC0ABkNGag.YhFDDg.anjpgAej5rLZsMRr2lVsHJsjLH4");
+    var formdata = new FormData();
+    formdata.append("url", urlInput.url);
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: formdata,
+      redirect: 'follow'
+    };
+
+    fetch("http://localhost:5000/qimageurl", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+  }
+
   return (
     <div className="popup-container">
       <div className="popup">
@@ -27,24 +107,25 @@ function popup(props) {
         </div>
         <div className="popup-content">
 
-          <form onSubmit={} enctype="multipart/form-data">
+          {/* <form onSubmit={handleSubmitFile} encType='multipart/form-data'>
             <label for={"file"}>
-              Upload Image
-              <input type="file" name="file" id="file" />
+              {(!setIsFile) ? "Upload Image" : "Uploaded!"}
+              <input type="file" ref={(ref) => setimageFile(ref)} name="file" id="file" onChange={onAddFile} />
             </label>
 
-            <StyledButton>Submit</StyledButton>
+            <StyledButton type={"submit"}>Submit</StyledButton>
           </form>
-          <p> OR </p>
-          <form action="/qimageurl" method="post">
+          <p> OR </p> */}
+          <form onSubmit={handleSubmitUrl}>
             <input
               type="url"
               name="url"
               id="url"
+              onChange={onAddUrl}
               placeholder="https://example.com"
               pattern="https://.*"
             />
-            <StyledButton>Submit</StyledButton>
+            <StyledButton type={"submit"}>Submit</StyledButton>
           </form>
         </div>
       </div>
@@ -52,4 +133,4 @@ function popup(props) {
   )
 }
 
-export default popup;
+export default Popup;

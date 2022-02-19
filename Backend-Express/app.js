@@ -16,6 +16,7 @@ const User = require('./models/user');
 // const helmet = require('helmet');
 // const mongoSanitize = require('express-mongo-sanitize');
 const userRoutes = require('./routes/users');
+var cors = require('cors')
 
 // const MongoDBStore = require("connect-mongo")(session);
 
@@ -32,6 +33,7 @@ mongoose
     });
 
 const app = express();
+app.use(cors())
 
 // app.engine('ejs', ejsMate)
 // app.set('view engine', 'ejs');
@@ -90,25 +92,25 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use("/search", function (req, res, next) {
-    var options = { method: 'GET',
-    url: 'https://localhost:5000/search',
-    headers: 
-     { 'cache-control': 'no-cache',
-       Connection: 'keep-alive',
-       'accept-encoding': 'gzip, deflate',
-       Host: 'localhost:5000',
-       'Cache-Control': 'no-cache',
-       Accept: '*/*',
-       'User-Agent': 'PostmanRuntime/7.15.0' }
-      };
+// app.use("/search", function (req, res, next) {
+//     var options = { method: 'GET',
+//     url: 'https://localhost:5000/search',
+//     headers: 
+//      { 'cache-control': 'no-cache',
+//        Connection: 'keep-alive',
+//        'accept-encoding': 'gzip, deflate',
+//        Host: 'localhost:5000',
+//        'Cache-Control': 'no-cache',
+//        Accept: '*/*',
+//        'User-Agent': 'PostmanRuntime/7.15.0' }
+//       };
   
   
-    return request(options, function (error, response, body) {
-      if (error) throw new Error(error);
-      res.json(body);
-    });
-  });
+//     return request(options, function (error, response, body) {
+//       if (error) throw new Error(error);
+//       res.json(body);
+//     });
+//   });
 // app.use('/', userRoutes);
 
 app.get('/', (req, res, next) => {
@@ -116,6 +118,7 @@ app.get('/', (req, res, next) => {
     // console.log(path.join(__dirname, "../public", "index.html"))
     // res.send("ha")
     // res.sendFile("index.html")
+    // res.header("Access-Control-Allow-Origin", "*");
     res.sendFile(path.join(__dirname, "..", "build", "index.html"))
 });
 
