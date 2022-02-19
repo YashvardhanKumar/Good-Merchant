@@ -26,6 +26,8 @@ svg{
   background: rgba(61, 44, 141, 0.77);
   color: #d0d0d0;
   transition: 0.5s ease;
+  border-radius: 50px;
+
 }
 
 .image-search:hover > svg,
@@ -34,15 +36,16 @@ svg{
   transition: 0.5s ease;
 }
 
-.btn:active,
-.image-search:active {
+.btn:focus,
+.image-search:focus {
   background: rgba(61, 44, 141, 1);
   color: #ffffff;
   transition: 0.5s ease;
+  border-radius: 7px;
 }
 
-.btn:active > *,
-.image-search:active > * {
+.btn:focus > *,
+.image-search:focus > * {
   fill: #ffffff;
   transition: 0.5s ease;
 }

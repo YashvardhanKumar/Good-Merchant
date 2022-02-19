@@ -90,10 +90,28 @@ app.use((req, res, next) => {
     next();
 })
 
-
+app.use("/search", function (req, res, next) {
+    var options = { method: 'GET',
+    url: 'https://localhost:5000/search',
+    headers: 
+     { 'cache-control': 'no-cache',
+       Connection: 'keep-alive',
+       'accept-encoding': 'gzip, deflate',
+       Host: 'localhost:5000',
+       'Cache-Control': 'no-cache',
+       Accept: '*/*',
+       'User-Agent': 'PostmanRuntime/7.15.0' }
+      };
+  
+  
+    return request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+      res.json(body);
+    });
+  });
 // app.use('/', userRoutes);
 
-app.get('/', (req, res, next) => {
+app.get('*', (req, res, next) => {
     // res.render('home')
     // console.log(path.join(__dirname, "../public", "index.html"))
     // res.send("ha")

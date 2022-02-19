@@ -3,6 +3,7 @@ input[type="file"] {
 }
 
 .popup {
+
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -15,10 +16,8 @@ input[type="file"] {
 
   z-index: 400;
   align-items: center;
-  background-color: black;
-  color: rgb(28, 12, 91);
-  /* padding: 10px; */
-  background-color: hsla(0, 0%, 100%, 0.5);
+  color: rgba(201, 150, 204, 1);
+  background-color: rgba(7, 4, 48, 0.7);
   backdrop-filter: blur(20px);
   border: 2px solid rgba(145, 107, 191, 0.24);
   border-radius: 10px;
@@ -33,7 +32,6 @@ input[type="file"] {
   width: 100%;
   justify-content: center;
   border-bottom: 2px solid rgba(145, 107, 191, 0.24);
-  /* border-radius: 10px; */
 }
 .popup-content {
   display: flex;
@@ -44,12 +42,11 @@ input[type="file"] {
   width: 100%;
 }
 .popup-content label, .popup-content form input {
-    /* width: 300px !important; */
     display: flex;
-    background-color: rgba(145, 107, 191, 0.24);
+    background-color: rgba(28, 12, 91, 0.44);
+    color: rgba(201, 150, 204, 1);
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     padding: 5px;
     margin: 4px;
     max-width: 600px;
@@ -67,11 +64,9 @@ input[type="file"] {
 }
 
 .popup-content form .btn {
-    /* width: 300px !important; */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     padding: 4px;
     margin: 4px;
     max-width: 600px;
@@ -88,7 +83,7 @@ input[type="file"] {
   align-self: flex-end;
 }
 .cancel:hover {
-  color: aliceblue;
+  color: #d0d0d0;
 }
 
 @media screen and (max-width: 552px) {
@@ -109,4 +104,3 @@ input[type="file"] {
   display: flex;
   justify-content: center;
 }
-

@@ -1,4 +1,5 @@
 import './navItems.light.css'
+import './navItems.dark.css'
 import SearchBox from '../SearchBox/searchBox'
 import React, { useState, useEffect } from 'react'
 import StyledButton from '../../styledbutton/StyledButton'

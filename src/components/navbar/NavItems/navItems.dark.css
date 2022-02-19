@@ -1,0 +1,119 @@
+/* Rectangle 5 */
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items {
+  height: 82px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: none;
+  background: transparent;
+  z-index: 100;
+}
+
+.responsive{
+    display:none !important;
+    /* color: #1C0C5B; */
+  }
+.responsive svg{
+  height: 30px;
+  width: 30px;
+}
+
+/* Sign Up */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.content:hover {
+  text-decoration-color: rgba(201, 150, 204, 1);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+}
+.content {
+  width: 74px;
+  height: 32px;
+  left: 1175px;
+  top: 29px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color:rgba(201, 150, 204, 1);
+}
+
+@media screen and (max-width: 800px) {
+  .separator {
+    display: none;
+  }
+  .nav-items > :not(.searchBox){
+    padding: 20px;
+    width: 100%;
+  }
+  .searchBox{
+    margin: 10px;
+  }
+  .nav-items {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #FFFFFF;
+    background-color: #070430;
+    height: auto;
+  }
+
+  .content:nth-child(1) {
+    border-top: 1px solid #1c0c5b;
+  }
+  .content{
+      border-top: 1px solid #1c0c5b;
+      text-align: center;
+  }
+  .responsive{
+      display: flex !important;
+      align-items: center;
+  }
+}
+@media  screen and (max-width: 600px) {
+  .content {
+    border-top: 1px solid #1c0c5b;
+  }
+  .nav-items .searchBox {
+    display: flex;
+  }
+  .searchBox input {
+    flex: 1
+  }
+  .searchBox{
+    width: 90vw;
+  }
+}
+/* Login */
+
+/* Line 1 */
+.separator {
+  width: 50px;
+  height: 0px;
+  left: 1142px;
+  top: 66px;
+  border: 0.5px solid rgba(201, 150, 204, 1);
+  box-sizing: border-box;
+  transform: rotate(-90deg);
+}

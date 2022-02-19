@@ -1,13 +1,15 @@
 import './IntroCards.light.css'
+import './IntroCards.dark.css'
 import React from 'react'
 import largelogo from '../../svgs/logolarge.light.svg'
+import largelogodark from '../../svgs/logolarge.dark.svg'
 
 function CardView() {
     return (
         <div className='card-container'>
             <div className="initial">
                 <div className='logo-card'>
-                    <img src={largelogo} alt="" />
+                    <img src={largelogodark} alt="" />
                 </div>
                 <div className='quote'>
                     Where you find the Best Price !!

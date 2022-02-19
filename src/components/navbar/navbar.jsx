@@ -3,8 +3,9 @@ import './navbar.dark.css'
 import SearchBox from './SearchBox/searchBox'
 import NavItems from './NavItems/navItems'
 import React, { useState, useEffect } from 'react'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import logo from '../../svgs/logo.light.svg'
+import logodark from '../../svgs/logo.dark.svg'
 
 const Navbar = (props) => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -21,13 +22,22 @@ const Navbar = (props) => {
     }, [])
     return (<nav>
         <Link to="/home" alt="Good Merchant">
-            <img src={logo}/>
+            <img src={logodark} />
         </Link>
         {(screenWidth > 600) && (
             <SearchBox toggleNav={props.toggleNav}/>
         )}
-        <NavItems toggleNav={props.toggleNav}/>
-    </nav>)
+        <NavItems toggleNav={props.toggleNav} />
+        {/* {(toggleMenu || screenWidth > 800) && ( */}
+        <div className="nav-items">
+            {/* {(screenWidth < 600) ? <SearchBox toggleNav={props.toggleNav} /> : ""} */}
+            <Link className="content" to="/login">
+                Login
+            </Link>
+        </div>
+        {/* )} */}
+    </nav>
+    )
 }
 
 export default Navbar

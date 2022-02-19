@@ -1,6 +1,7 @@
 import React from "react";
 import StyledButton from "../styledbutton/StyledButton";
 import './popup.light.css'
+import './popup.dark.css'
 function popup(props) {
   return (
     <div className="popup-container">
@@ -20,20 +21,10 @@ function popup(props) {
           <form action="/qimage" method="post" enctype="multipart/form-data">
             <label for={"file"}>
               Upload Image
-              <input type="file" value={content} onChange={e => setContent(e.target.value)} name="file" id="file" />
+              <input type="file" name="file" id="file" />
             </label>
 
-            <StyledButton onClick={async () => {
-              const todo = { content };
-              const response = await fetch("/add_todo", {
-                method: "POST",
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(todo)
-              })
-            }
-          }>Submit</StyledButton>
+            <StyledButton>Submit</StyledButton>
           </form>
           <p> OR </p>
           <form action="/qimageurl" method="post">
