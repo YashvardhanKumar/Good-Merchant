@@ -1,0 +1,112 @@
+input[type="file"] {
+  display: none !important;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5.5em;
+  max-height: 600px;
+  max-width: 600px;
+  width: 80%;
+  height: 60%;
+  min-width: 300px;
+
+  z-index: 400;
+  align-items: center;
+  background-color: black;
+  color: rgb(28, 12, 91);
+  /* padding: 10px; */
+  background-color: hsla(0, 0%, 100%, 0.5);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(145, 107, 191, 0.24);
+  border-radius: 10px;
+}
+
+.popup-heading {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 2px solid rgba(145, 107, 191, 0.24);
+  /* border-radius: 10px; */
+}
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.popup-content label, .popup-content form input {
+    /* width: 300px !important; */
+    display: flex;
+    background-color: rgba(145, 107, 191, 0.24);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 4px;
+    max-width: 600px;
+    width: 90% !important;
+
+}
+
+.popup-content form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 90% !important;
+}
+
+.popup-content form .btn {
+    /* width: 300px !important; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 4px;
+    max-width: 600px;
+    width: 90% !important;
+}
+.cancel {
+  position: absolute;
+  right: 0;
+  /* top: 0; */
+  display: flex;
+  border: none;
+  background-color: transparent;
+  width: max-content;
+  align-self: flex-end;
+}
+.cancel:hover {
+  color: aliceblue;
+}
+
+@media screen and (max-width: 552px) {
+  .cancel{
+    /* display: none; */
+    position: relative;
+    align-items: center;
+  }
+  .popup-heading{
+    justify-content: space-between;
+    font-size: smaller;
+  }
+}
+
+.popup-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+

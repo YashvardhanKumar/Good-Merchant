@@ -1,15 +1,15 @@
 from asyncio.windows_events import NULL
+from concurrent.futures import process
 from importlib.resources import path
 import re
 from werkzeug.utils import secure_filename
-from flask import Flask, flash, request, redirect, url_for
+from flask import Flask, flash, request, redirect, send_file, send_from_directory, url_for
 import os
 import imp
 from flask import Flask, jsonify, render_template, request
 import pickle
 import numpy as np
 from keras import models
-import urllib.request
 from ML_Model import ML_Model_Good_Merchant as GMM
 
 app = Flask(__name__)
@@ -28,36 +28,46 @@ app.secret_key = "secret-key"
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/searchimage')
-def image():
-    if request.method == 'GET':
-        return render_template('ind.html')
+# @app.route('/searchimage')
+# def image():
+    # if request.method == 'GET':
+    # return app.send_static_file('../public/index.html')
+# @app.errorhandler(404)
+# def not_found(e):
 
 
+@app.route('/search', methods=['GET'])
+def f():
+    return "something"
 @app.route('/qimage', methods=['POST'])
 def image_binary():
+    # pred_text(request.path)
+
     if 'file' not in request.files:
         flash('No file part')
-        return redirect('/searchimage')
-    
+        return redirect(request.path)
+
     file = request.files['file']
-    
+
     if file.filename == '':
         flash('No image selected for uploading or no URL added')
-        return redirect('/searchimage')
-    
+        return redirect(request.path)
+
     elif file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        # print("yash",filename,filepath)
         filepath = 'static/uploads/' + filename
         image = GMM.process_image_binary(filepath)
-        pred_text = GMM.predict_image(image,model)
+        pred_text = GMM.predict_image(image, model)
         os.remove(filepath)
-        return redirect('/?search=' + pred_text)
+        pred_text(request.path)
+        return {'q': pred_text}
+        # return pred_text
     else:
         flash('Allowed image types are -> png, jpg, jpeg, gif')
-        return redirect('/searchimage')
-    
+        return redirect(request.path)
+
 
 @app.route('/qimageurl', methods=['POST'])
 def image_url():
@@ -67,8 +77,16 @@ def image_url():
     else:
         flash('No image selected for uploading or no URL added')
         return redirect('/searchimage')
-    pred_text = GMM.predict_image(image,model)
-    return redirect('/?search=' + pred_text)
+    pred_text = GMM.predict_image(image, model)
+    return {'q': pred_text}
+    # return pred_text
+
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    # app.run(debug=True)
+    osPort = os.getenv("PORT")
+    if osPort == None:
+        port = 5000
+    else:
+        port = int(osPort)
+    app.run(host='0.0.0.0', port=port)

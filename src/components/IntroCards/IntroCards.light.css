@@ -33,6 +33,7 @@ border: 1px solid rgba(255, 255, 255, 0.24);
   font-size: 15px;
   line-height: 27px;
   color: rgba(59, 143, 162, 0.81);
+  
 }
 
 /* Where you find the Best Price !! */
@@ -75,6 +76,6 @@ color: #3D2C8D;
 
 @media screen and (max-width:800px){
   .about,.initial{
-    min-width: 200px;
+    min-width: 300px;
   }
 }

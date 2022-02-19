@@ -5,9 +5,11 @@
   justify-content: center;
   margin: 0.7px;
 
-  min-width: 33px;
-  min-height: 33px;
-
+  /* min-width: 33px; */
+  /* min-height: 33px; */
+  padding: 4px;
+  font-size: 1rem;
+  color: rgb(28, 12, 91);
   background: rgba(145, 107, 191, 0.55);
   border: 1px solid #916bbf;
   box-sizing: border-box;
@@ -19,22 +21,27 @@
   background: rgba(145, 107, 191, 0.77);
   color: #d0d0d0;
   transition: 0.5s ease;
+  border-radius: 50px;
+
 }
 
-.image-search:hover > svg,.btn:hover > svg{
-    fill: #d0d0d0;
+.image-search:hover > svg,
+.btn:hover > svg {
+  fill: #d0d0d0;
   transition: 0.5s ease;
 }
 
-.btn:active,
-.image-search:active {
+.btn:focus,
+.image-search:focus {
   background: rgba(145, 107, 191, 1);
   color: #ffffff;
   transition: 0.5s ease;
+  border-radius: 7px;
 }
 
-.btn:active > *,
-.image-search:active > *{
-    fill: #ffffff;
-    transition: 0.5s ease;
+.btn:focus > *,
+.image-search:focus > * {
+  fill: #ffffff;
+  transition: 0.5s ease;
+  border-radius: 7px;
 }
