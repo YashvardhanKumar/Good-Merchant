@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StyledButton from "../styledbutton/StyledButton";
 import './popup.light.css'
 import './popup.dark.css'
 function popup(props) {
+  useEffect(() => {
+    const article = { title: 'React POST Request Example' };
+    axios.post('https://localhost:5000/qimage', article)
+      .then(response => this.setState({ articleId: response.data.id }))
+      .catch(error => {
+        this.setState({ errorMessage: error.message });
+        console.error('There was an error!', error);
+      });
+  }, []);
   return (
     <div className="popup-container">
       <div className="popup">
@@ -18,7 +27,7 @@ function popup(props) {
         </div>
         <div className="popup-content">
 
-          <form action="/qimage" method="post" enctype="multipart/form-data">
+          <form onSubmit={} enctype="multipart/form-data">
             <label for={"file"}>
               Upload Image
               <input type="file" name="file" id="file" />

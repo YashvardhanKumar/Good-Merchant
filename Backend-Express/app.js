@@ -111,7 +111,7 @@ app.use("/search", function (req, res, next) {
   });
 // app.use('/', userRoutes);
 
-app.get('*', (req, res, next) => {
+app.get('/', (req, res, next) => {
     // res.render('home')
     // console.log(path.join(__dirname, "../public", "index.html"))
     // res.send("ha")
@@ -120,7 +120,7 @@ app.get('*', (req, res, next) => {
 });
 
 
-app.all('*', (req, res, next) => {
+app.all('/', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404))
 })
 

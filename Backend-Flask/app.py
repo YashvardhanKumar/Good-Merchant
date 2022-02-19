@@ -11,9 +11,10 @@ import pickle
 import numpy as np
 from keras import models
 from ML_Model import ML_Model_Good_Merchant as GMM
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 model = models.load_model('ML_Model/savedmodel.h5')
 
 UPLOAD_FOLDER = 'static/uploads'
@@ -36,9 +37,9 @@ def allowed_file(filename):
 # def not_found(e):
 
 
-@app.route('/search', methods=['GET'])
-def f():
-    return "something"
+# @app.route('/search', methods=['GET'])
+# def f():
+#     return "something"
 @app.route('/qimage', methods=['POST'])
 def image_binary():
     # pred_text(request.path)
@@ -61,7 +62,7 @@ def image_binary():
         image = GMM.process_image_binary(filepath)
         pred_text = GMM.predict_image(image, model)
         os.remove(filepath)
-        pred_text(request.path)
+        # pred_text(request.path)
         return {'q': pred_text}
         # return pred_text
     else:
