@@ -4,11 +4,11 @@ import './App.light.css';
 import './App.dark.css';
 import React, { useState } from 'react'
 import Homepage from '../../Pages/Homepage/Homepage';
-import { Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch, useHistory } from 'react-router-dom'
 import { CategoriesPage } from '../../Pages/CategoriesPage/CategoriesPage';
 import Navbar from '../navbar/navbar';
 import Background from '../background/background';
-import { Popup, searchQ } from '../PopUp/popup'
+import Popup from '../PopUp/popup'
 import LoginPage from '../../Pages/LoginPage/LoginPage';
 import SignupPage from '../../Pages/SignupPage/SignupPage';
 import SearchResults from '../../Pages/SearchResults/SearchResults';
@@ -28,7 +28,9 @@ function App() {
   var [isInput, setIsInput] = useState(false)
   const isInputTyped = () => setIsInput(true)
   const toggleNav = () => setToggleMenu(!toggleMenu)
-  console.log(searchQ)
+  // console.log(searchQ)
+  const { history } = useHistory();
+
 
   return (
 

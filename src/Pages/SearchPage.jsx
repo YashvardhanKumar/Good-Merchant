@@ -5,12 +5,12 @@ import SearchBox from '../components/navbar/SearchBox/searchBox';
 
 
 const Container = styled.div`
-padding: 10px;
-top: 100px;
+padding: 100px;
+// top: 100px;
 
 display: flex;
 flex-direction: column;
-  position: absolute;
+  // position: absolute;
   width: fit-content;
   overflow-x: hidden;
 
@@ -136,15 +136,20 @@ border-radius: 0px 0px 15px 15px;
 `
   ;
 
-let fdata = data
-const name = new URLSearchParams(window.location.search).get('q');
-const lowercasedValue = name.toLowerCase().trim();
-if (lowercasedValue.startsWith("all")) fdata = data;
-else if(lowercasedValue === "") fdata = data
-else {
-  fdata = data.filter(item => Object.keys(item).some(key =>
-    item[key].toString().toLowerCase().includes(lowercasedValue)
-  ))
+let fdata = {}
+const name = new URLSearchParams(window.location.search).get('q') || 'all';
+if (name) { 
+  const lowercasedValue = name.toLowerCase().trim();
+  if (lowercasedValue.startsWith("all")) fdata = data;
+  else if (lowercasedValue === "") fdata = data
+  else {
+    fdata = data.filter(item => Object.keys(item).some(key =>
+      item[key].toString().toLowerCase().includes(lowercasedValue)
+    ))
+    for (let i = 0; i < fdata.length; i++) {
+      fdata.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0))
+    }
+  }
 }
 
 
@@ -152,11 +157,12 @@ const SearchPage = () => {
   return (
     <Container>
       <Title> Results for "{name}"
-        <Italic>{fdata.length} Results</Italic>
+        <Italic>{(fdata) ? fdata.length : "0"} Results</Italic>
       </Title>
       <Wrapper>
         {
-          fdata.map((item) => (
+          
+          (fdata) ? fdata.map((item) => (
             <Cover >
               <Website><Webname>{item.baseURL}</Webname></Website>
               <AImage href={item.productURL} >
@@ -169,7 +175,7 @@ const SearchPage = () => {
 
               </InfoContainer>
             </Cover>
-          ))
+          )) : ""
         }
       </Wrapper>
     </Container>

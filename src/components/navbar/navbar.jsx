@@ -21,7 +21,7 @@ const Navbar = (props) => {
         }
     }, [])
     return (<nav>
-        <Link to="/home" alt="Good Merchant">
+        <Link to="/" alt="Good Merchant">
             <img src={logodark} />
         </Link>
         {(screenWidth > 600) && (

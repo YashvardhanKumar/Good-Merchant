@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,withRouter } from "react-router-dom";
 import StyledButton from "../styledbutton/StyledButton";
 import './popup.light.css'
 import './popup.dark.css'
 let searchQ
+
 function Popup(props) {
   let [imageFile, setimageFile] = useState({})
   const [submitted, setSubmitted] = useState(false);
@@ -87,6 +88,8 @@ function Popup(props) {
         console.log(result)
         setSubmitted(true)
         history.push('/search?q=' + result.q)
+        window. location. reload() 
+        // history.replace()
       })
       .catch(error => console.log('error', error));
   }
@@ -132,4 +135,4 @@ function Popup(props) {
   )
 }
 
-export { Popup, searchQ }
+export default withRouter(Popup)
