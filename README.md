@@ -6,7 +6,9 @@ All you need to do is paste the URL of an image of the electronic gadget you wis
 With the help of Good Merchant, you can now begin your journey towards saving money.
  
 # Screenshots
-----Screenshots----
+![image](https://user-images.githubusercontent.com/79046841/154858621-fbb3bb7e-6716-4e1d-b3f3-b664a72ea882.png)
+![image](https://user-images.githubusercontent.com/79046841/154858669-905e2203-d3cd-44c6-9070-6cb2162b3aa9.png)
+
 
 # Hosted URL
 ----If Hosted----
