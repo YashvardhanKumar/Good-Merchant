@@ -50,8 +50,8 @@ To start the flask server of the project
 To start the Node.js server of the project
 # Team Members
 - Yashvardhan Kumar (2020IMT-118)
-- Pravallika Bollam (2020IMT-118)
+- Pravallika Bollam (2020BCS-021)
 - Tejal Edulakanti (2020IMT-106)
 - Gaddam Swathi Reddy (2020IMT-033)
-- Karthik Sharma (2020IMT-118)
-- Sahithi (2020IMT-118)
+- Karthik Sharma (2020IMT-114)
+- Sahithi (2020BCS-023)
