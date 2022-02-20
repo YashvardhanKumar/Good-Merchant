@@ -11,7 +11,7 @@ export const data = [
     {
         productURL: "https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A08749572GHE6FI1FXS7N&url=%2FSamsung-Storage-Snapdragon-sAMOLED-Display%2Fdp%2FB09CV6FJ62%2Fref%3Dsr_1_2_sspa%3Fcrid%3D21NF8X8ADKP8%26keywords%3Dphones%26qid%3D1645257313%26sprefix%3Dphones%252Caps%252C273%26sr%3D8-2-spons%26psc%3D1&qualifier=1645257313&id=3661733772569643&widgetName=sp_atf",
         price: 24999,
-        priceString: "₹24999",
+        priceString: "₹24,999",
         name: "Samsung Galaxy M52 5G (ICY Blue, 6GB RAM, 128GB Storage) Latest Snapdragon 778G 5G | sAMOLED 120Hz Display",
         category: "mobiles",
         baseURL: "www.amazon.in",
@@ -20,7 +20,7 @@ export const data = [
     {
         productURL: "https://www.amazon.in/Redmi-9A-3GB-32GB-Storage/dp/B086973W9M/ref=sr_1_3?crid=21NF8X8ADKP8&keywords=phones&qid=1645257313&sprefix=phones%2Caps%2C273&sr=8-3",
         price: 7999,
-        priceString: "₹7999",
+        priceString: "₹7,999",
         name: "Redmi 9A (Sea Blue 3GB RAM 32GB Storage)| 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery",
         category: "mobiles",
         baseURL: "www.amazon.in",
@@ -382,7 +382,7 @@ export const data = [
         price: 59990,
         priceString: "₹59,990",
         name: "ASUS VivoBook 14 (2021), 14-inch (35.56 cms) FHD, Intel Core i7-1065G7 10th Gen, Thin and Light Laptop (16GB/512GB SSD/Integrated Graphics/Office 2021/Windows 11/Silver/1.6 Kg), X415JA-EK701WS",
-        category: "earpods",
+        category: "laptop",
         baseURL: "www.amazon.in",
         imgURL: "https://m.media-amazon.com/images/I/71WuDXpTAlL._AC_UY327_QL65_.jpg"
     },
@@ -391,7 +391,7 @@ export const data = [
         price: 136990,
         priceString: "₹1,36,990",
         name: "Lenovo Legion 5 AMD Ryzen 7 5800H 15.6\"(39.62cm) FHD IPS Gaming Laptop (16GB/2TB SSD/6GB Nvidia RTX 3060 Graphics/Windows 11/Office 2021/RGB Keyboard/165Hz Refresh Rate/Phantom Blue/2.4Kg), 82JU010NIN",
-        category: "earpods",
+        category: "laptop",
         baseURL: "www.amazon.in",
         imgURL: "https://m.media-amazon.com/images/I/61Er61SxBhL._AC_UY327_QL65_.jpg"
     },
@@ -400,7 +400,7 @@ export const data = [
         price: 96990,
         priceString: "₹96,990",
         name: "ASUS TUF Gaming F15 (2021) 15.6-inch (39.62 cms) FHD 144Hz, Intel Core i7-11800H 11th Gen, RTX 3050 Ti 4GB Graphics, Gaming Laptop (16GB/1TB SSD/Windows 10/Gray/2.3 Kg), FX566HEB-HN248T",
-        category: "earpods",
+        category: "laptop",
         baseURL: "www.amazon.in",
         imgURL: "https://m.media-amazon.com/images/I/91aWfctUptL._AC_UY327_QL65_.jpg"
     },

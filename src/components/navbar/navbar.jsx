@@ -28,14 +28,6 @@ const Navbar = (props) => {
             <SearchBox toggleNav={props.toggleNav}/>
         )}
         <NavItems toggleNav={props.toggleNav} />
-        {/* {(toggleMenu || screenWidth > 800) && ( */}
-        <div className="nav-items">
-            {/* {(screenWidth < 600) ? <SearchBox toggleNav={props.toggleNav} /> : ""} */}
-            <Link className="content" to="/login">
-                Login
-            </Link>
-        </div>
-        {/* )} */}
     </nav>
     )
 }

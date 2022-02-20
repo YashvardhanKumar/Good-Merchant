@@ -150,7 +150,7 @@ const Category = () => {
         </a>
         </Logo>
 
-       <Search ><SearchBox /></Search>
+       {/* <Search ><SearchBox /></Search> */}
        </Wrapone>
        <BestTag />
        <Title>Shop By Category</Title>

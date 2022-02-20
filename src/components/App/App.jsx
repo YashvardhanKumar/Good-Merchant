@@ -8,7 +8,7 @@ import { Route, Switch } from 'react-router-dom'
 import { CategoriesPage } from '../../Pages/CategoriesPage/CategoriesPage';
 import Navbar from '../navbar/navbar';
 import Background from '../background/background';
-import Popup from '../PopUp/popup'
+import { Popup, searchQ } from '../PopUp/popup'
 import LoginPage from '../../Pages/LoginPage/LoginPage';
 import SignupPage from '../../Pages/SignupPage/SignupPage';
 import SearchResults from '../../Pages/SearchResults/SearchResults';
@@ -27,14 +27,15 @@ function App() {
   var [isInput, setIsInput] = useState(false)
   const isInputTyped = () => setIsInput(true)
   const toggleNav = () => setToggleMenu(!toggleMenu)
+  console.log(searchQ)
 
   return (
 
-    
-    
+
+
     <div>
 
-      <Navbar toggleNav={toggleNav}/>
+      <Navbar toggleNav={toggleNav} />
       <Background />
       {(toggleMenu) && <Popup className="popup" toggleMenu={toggleNav} />}
       {(isInput)}
@@ -52,8 +53,8 @@ function App() {
         <Route exact path='/signup'>
           <SignupPage />
         </Route>
-        <Route exact path={'/search'}>
-          <SearchResults/>
+        <Route exact path="/search" >
+            <SearchResults />
         </Route>
       </Switch>
     </div>

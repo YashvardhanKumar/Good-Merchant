@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import StyledButton from "../styledbutton/StyledButton";
 import './popup.light.css'
 import './popup.dark.css'
+let searchQ
 function Popup(props) {
   let [imageFile, setimageFile] = useState({})
-  let [isFile, setIsFile] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
   let [urlInput, seturlInput] = useState({
     url: ""
   })
-
+  const history = useHistory();
   const onAddFile = (event) => {
     event.target.value = null
     setimageFile(event.target.files[0])
-    if (event.target.files[0] === null) {
-      setIsFile(false)
-    }
-    else {
-      setIsFile(true)
-    }
   }
   const onAddUrl = (event) => {
     const { value, name } = event.target
@@ -85,10 +81,13 @@ function Popup(props) {
       body: formdata,
       redirect: 'follow'
     };
-
     fetch("http://localhost:5000/qimageurl", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+        setSubmitted(true)
+        history.push('/search?q=' + result.q)
+      })
       .catch(error => console.log('error', error));
   }
 
@@ -133,4 +132,4 @@ function Popup(props) {
   )
 }
 
-export default Popup;
+export { Popup, searchQ }

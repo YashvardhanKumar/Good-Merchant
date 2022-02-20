@@ -5,7 +5,7 @@ from flask import Flask, jsonify, render_template, request
 from keras import models
 from ML_Model import ML_Model_Good_Merchant as GMM
 from flask_cors import CORS
-proxy_url = 'http://localhost:3001'
+proxy_url = 'http://localhost:3000'
 app = Flask(__name__)
 CORS(app)
 model = models.load_model('ML_Model/savedmodel.h5')
@@ -42,7 +42,7 @@ def image_binary():
         image = GMM.process_image_binary(filepath)
         pred_text = GMM.predict_image(image, model)
         os.remove(filepath)
-        return pred_text
+        return {'q':pred_text}
     else:
         flash('Allowed image types are -> png, jpg, jpeg, gif')
         print('mai hu 3')
@@ -58,7 +58,7 @@ def image_url():
         flash('No image selected for uploading or no URL added')
         return redirect('/searchimage')
     pred_text = GMM.predict_image(image, model)
-    return pred_text
+    return {'q':pred_text}
 
 
 @app.after_request  # blueprint can also be app~~
