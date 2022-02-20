@@ -140,7 +140,7 @@ let fdata = data
 const name = new URLSearchParams(window.location.search).get('q');
 const lowercasedValue = name.toLowerCase().trim();
 if (lowercasedValue.startsWith("all")) fdata = data;
-else if(lowercasedValue === "") fdata = {}
+else if(lowercasedValue === "") fdata = data
 else {
   fdata = data.filter(item => Object.keys(item).some(key =>
     item[key].toString().toLowerCase().includes(lowercasedValue)
