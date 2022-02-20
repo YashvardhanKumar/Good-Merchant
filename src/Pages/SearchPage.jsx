@@ -5,42 +5,81 @@ import SearchBox from '../components/navbar/SearchBox/searchBox';
 
 
 const Container = styled.div`
-margin: 30px;
+padding: 10px;
+top: 100px;
 
-`;
-const Navsection = styled.div`
 display: flex;
-align-items:center;
-margin-bottom: 20px;
+flex-direction: column;
+  position: absolute;
+  width: fit-content;
+  overflow-x: hidden;
 
 `;
-const Logo = styled.div``;
-const Search = styled.div`
-margin-left: 400px;`;
 
+const Website = styled.div`
+width: 100%;
+height: 34px;
+background: rgba(61, 44, 141, 0.5);
+backdrop-filter: blur(80px);
+display: flex;
+align-items: center;
+border-radius: 15px 15px 0px 0px;
+justify-content: center;
+`
+const Webname = styled.div`
+border-radius: 15px 15px 0px 0px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+
+text-align: center;
+
+
+color: rgba(255, 255, 255, 0.78);
+`
+
+const Italic = styled.i`
+color: grey;
+`
 const Title = styled.h2`
+height: max-content;
+display: flex;
+flex-direction: column;
+color: #fff;
+justify-content: center;
+padding: 18px;
+background: rgba(7, 4, 48, 0.7);
+backdrop-filter: blur(30px);
+border-radius: 15px;
 `;
 const Wrapper = styled.div`
 display:flex;
 flex-wrap:wrap;
-width:100vw;
-margin: 30px;`;
+align-items: center;
+justify-content: center;
+padding: 30px;
+`;
 
 const Cover = styled.div`
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-width: 30vw;
+width: 300px;
+
 margin: 10px;
 
-
+background: rgba(255, 255, 255, 0.32);
+border: 1px solid rgba(255, 255, 255, 0.24);
+box-sizing: border-box;
+backdrop-filter: blur(80px);
+border-radius: 15px;
 `;
 
 
 const Image = styled.img`
-height: 70%;
-width: 80%;
+height: 100%;
+width: 100%;
 object-fit:contain;
 margin-bottom: 20px;
 
@@ -49,59 +88,91 @@ const InfoContainer = styled.div`
 display:flex;
 flex-direction:column;
 align-items:center;
+width: 100%;
 `;
+
+const A = styled.a`
+text-decoration-line: none;
+color: #9DFFE7;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+height: 80px;
+width: 100%;
+background: #1C0C5B;
+
+
+`
+const AImage = styled.a`
+text-decoration-line: none;
+color: #9DFFE7;
+height: 200px;
+
+`
 
 const Desc = styled.span`
-font-size: 11px;
-padding-bottom:9px;
+font-size: 14px;
 
+position: relative;
+display: inline-block;
+word-wrap: break-word;
+overflow: hidden;
+max-height: 3.5em; /* (Number of lines you want visible) * (line-height) */
+line-height: 1.2em;
 `;
 const Price = styled.span`
-color: #841b2d;
-font-weight:bold;
-font-size: 26px;`;
+width: 100%;
+flex: 0.3;
+display: flex:
+align-items: center;
+justify-content: center;
 
+color: rgba(255, 255, 255, 0.71);
+background: #916BBF;
+backdrop-filter: blur(80px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 0px 0px 15px 15px;
+`
+  ;
+
+let fdata = data
+const name = new URLSearchParams(window.location.search).get('q');
+const lowercasedValue = name.toLowerCase().trim();
+if (lowercasedValue.startsWith("all")) fdata = data;
+else if(lowercasedValue === "") fdata = {}
+else {
+  fdata = data.filter(item => Object.keys(item).some(key =>
+    item[key].toString().toLowerCase().includes(lowercasedValue)
+  ))
+}
 
 
 const SearchPage = () => {
   return (
-   <Container>
-       <Navsection>  
-       <Logo >
-         <a href="/">
-            <svg width="10em" height="66" viewBox="0 0 316 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M56.0504 3H5.42832C3 3 3 4.66226 3 5.46103C3 6.25981 3 68.0381 3 70.4665C3 72.8949 5.42832 72.8949 5.42832 72.8949H56.0504C56.0504 72.8949 58.2919 72.8949 58.2919 70.4665V44.8753C58.2919 42.8205 56.0504 42.8205 56.0504 42.8205M56.0504 42.8205H35.3159C35.3159 42.8205 33.4479 42.8205 33.4479 44.8753C33.4479 46.93 33.4479 58.1379 33.4479 58.1379M56.0504 42.8205C56.0504 42.8205 57.5448 42.6337 58.6655 43.7545C59.7863 44.8753 71.9281 57.3907 71.9281 57.3907C71.9281 57.3907 82.8473 44.3149 83.3228 43.5677C83.7983 42.8205 84.8171 42.8205 84.8171 42.8205V72.8949M111.903 42.8205H91.7287M111.903 72.8949H91.7287M121.99 42.8205H139.922C139.922 42.8205 142.164 42.8205 142.164 44.8753V54.9623C142.164 57.3907 139.922 57.3907 139.922 57.3907C133.839 57.3907 128.154 57.3907 124.605 57.3907C121.056 57.3907 121.056 57.5775 124.605 60.3794C128.154 63.1814 142.164 72.8949 142.164 72.8949M91.7287 57.3907H111.903M150.757 42.8205H117.88M150.757 49.9188H117.88M189.984 42.8205V57.8577M189.984 72.8949V57.8577M210.158 42.8205V57.8577M210.158 72.8949V57.8577M189.984 57.8577H210.158M221.179 72.8949C222.499 69.7656 224.869 63.7168 227.139 57.8577M249.572 72.8949C249.572 72.8949 246.039 65.3781 242.497 57.8577M259.659 72.8949C259.659 72.8949 259.659 44.8753 259.659 42.8205C259.659 40.7657 282.635 75.1365 282.635 72.8949C282.635 70.6533 282.635 42.8205 282.635 42.8205M227.139 57.8577C230.022 50.4145 232.744 43.2773 232.947 42.8205C233.695 41.1393 234.37 40.9525 235.376 42.8205C235.615 43.2656 239.061 50.5633 242.497 57.8577M227.139 57.8577H242.497M303.183 42.8205V72.8949M293.096 42.8205H313.27M181.578 42.8205H161.404C161.404 42.8205 158.976 42.8205 158.976 44.8753C158.976 46.93 158.976 70.4665 158.976 70.4665C158.976 72.8949 161.404 72.8949 161.404 72.8949L181.578 72.8949M35.8763 35.9092H56.0504C56.0504 35.9092 58.2919 35.9092 58.2919 33.4808V14.6142C58.2919 12.5594 56.0504 12.5594 56.0504 12.5594H35.8763C35.8763 12.5594 33.4479 12.5594 33.4479 14.6142C33.4479 16.669 33.4479 33.4808 33.4479 33.4808C33.4479 35.9092 35.8763 35.9092 35.8763 35.9092ZM74.3565 35.9092H94.5306C94.5306 35.9092 96.7722 35.9092 96.7722 33.4808V14.6142C96.7722 12.5594 94.5306 12.5594 94.5306 12.5594H74.3565C74.3565 12.5594 71.9281 12.5594 71.9281 14.6142C71.9281 16.669 71.9281 33.4808 71.9281 33.4808C71.9281 35.9092 74.3565 35.9092 74.3565 35.9092ZM110.782 35.9092H133.384C133.384 35.9092 135.626 35.9092 135.626 33.4808V14.6142C135.626 12.5594 133.384 12.5594 133.384 12.5594L110.782 12.3726C110.782 14.4274 110.782 35.9092 110.782 35.9092Z" stroke="url(#paint0_linear_82_130)" stroke-width="5" stroke-linecap="round" />
-                <defs>
-                    <linearGradient id="paint0_linear_82_130" x1="158.042" y1="72.8622" x2="158.042" y2="3" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#6224A0" />
-                        <stop offset="1" stop-color="#133AC7" />
-                    </linearGradient>
-                </defs>
-            </svg>
-        </a>
-        </Logo>
-        <Search ><SearchBox /></Search>
-       </Navsection>
-       <Title> Results for "Earpods"</Title>
-       <Wrapper>
-           {
-           data.map((item) => (
-           <Cover >
-        <a href = {item.productURL} >
-           <Image src= {item.imgURL}/>
-         </a>
-    
-        <InfoContainer>
+    <Container>
+      <Title> Results for "{name}"
+        <Italic>{fdata.length} Results</Italic>
+      </Title>
+      <Wrapper>
+        {
+          fdata.map((item) => (
+            <Cover >
+              <Website><Webname>{item.baseURL}</Webname></Website>
+              <AImage href={item.productURL} >
+                <Image src={item.imgURL} />
+              </AImage>
+              <InfoContainer>
 
-          <a href = {item.productURL} ><Desc>{item.name} </Desc> </a>
-          <Price>{item.priceString} </Price>
+                <A href={item.productURL} ><Desc>{item.name} </Desc> </A>
+                <Price>{item.priceString} </Price>
 
-        </InfoContainer>
-        </Cover>
-           ))
-}
-       </Wrapper>
-   </Container>
+              </InfoContainer>
+            </Cover>
+          ))
+        }
+      </Wrapper>
+    </Container>
   )
 }
 

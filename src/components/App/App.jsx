@@ -12,6 +12,7 @@ import { Popup, searchQ } from '../PopUp/popup'
 import LoginPage from '../../Pages/LoginPage/LoginPage';
 import SignupPage from '../../Pages/SignupPage/SignupPage';
 import SearchResults from '../../Pages/SearchResults/SearchResults';
+import SearchPage from '../../Pages/SearchPage';
 
 
 // import ImageSearch from '../ImageSearching/imagesearch';
@@ -54,7 +55,7 @@ function App() {
           <SignupPage />
         </Route>
         <Route exact path="/search" >
-            <SearchResults />
+            <SearchPage />
         </Route>
       </Switch>
     </div>

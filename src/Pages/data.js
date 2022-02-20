@@ -24,7 +24,7 @@ export const data = [
         name: "Redmi 9A (Sea Blue 3GB RAM 32GB Storage)| 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery",
         category: "mobiles",
         baseURL: "www.amazon.in",
-        imgURL: "Redmi 9A (Sea Blue 3GB RAM 32GB Storage)| 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery"
+        imgURL: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTcbMh9BVqHweUhx-91MKq-mR48UJ44pqCl4QWwL9ThdmWDJMTy"
     },
     {
         productURL: "https://www.amazon.in/Oppo-Mystery-Storage-Additional-Exchange/dp/B08444S68L/ref=sr_1_7?crid=21NF8X8ADKP8&keywords=phones&qid=1645257313&sprefix=phones%2Caps%2C273&sr=8-7",
@@ -83,7 +83,7 @@ export const data = [
     {
         productURL: "https://www.amazon.in/Redmi-9A-Midnight-2GB-32GB/dp/B08697N43G/ref=sr_1_16?crid=21NF8X8ADKP8&keywords=phones&qid=1645257313&sprefix=phones%2Caps%2C273&sr=8-16",
         price: 7499,
-        priceString: "₹",
+        priceString: "₹7,499",
         name: "Redmi 9A (Midnight Black 2GB RAM 32GB Storage) | 2GHz Octa-core Helio G25 Processor | 5000 mAh Battery",
         category: "mobiles",
         baseURL: "www.amazon.in",
@@ -105,7 +105,7 @@ export const data = [
         name: "Vivo Y21T (Midnight Blue, 4GB RAM, 128GB ROM) with No Cost EMI/Additional Exchange Offers",
         category: "mobiles",
         baseURL: "www.amazon.in",
-        imgURL: "Vivo Y21T (Midnight Blue, 4GB RAM, 128GB ROM) with No Cost EMI/Additional Exchange Offers"
+        imgURL: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQZb4OLD77Xd0EAirglgb1ScJ-QUQbDM9JOC0THVpjqDIjYBBsU"
     },
     {
         productURL: "https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_next_aps_sr_pg2_1?ie=UTF8&adId=A08751132PSJVO3MM7HZS&url=%2FSamsung-Blazing-Storage-Snapdragon-sAMOLED%2Fdp%2FB09CV463ZY%2Fref%3Dsr_1_17_sspa%3Fcrid%3D21NF8X8ADKP8%26keywords%3Dphones%26qid%3D1645258963%26sprefix%3Dphones%252Caps%252C273%26sr%3D8-17-spons%26psc%3D1&qualifier=1645258963&id=1374594798070285&widgetName=sp_atf_next",
@@ -155,7 +155,7 @@ export const data = [
     {
         productURL: "https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A0333476CCJD46GR03J3&url=%2FApple-iPhone-13-128GB-Midnight%2Fdp%2FB09G9HD6PD%2Fref%3Dsr_1_1_sspa%3Fcrid%3D37FL0ERN5R9C8%26keywords%3Diphone%26qid%3D1645259733%26sprefix%3Diphones%252Caps%252C851%26sr%3D8-1-spons%26psc%3D1&qualifier=1645259733&id=18054520112498&widgetName=sp_atf",
         price: 74900,
-        priceString: "₹74900",
+        priceString: "₹74,900",
         name: "Apple iPhone 13 (128GB) - Midnight",
         category: "mobiles",
         baseURL: "www.amazon.in",
@@ -173,7 +173,7 @@ export const data = [
     {
         productURL: "https://www.amazon.in/New-Apple-iPhone-11-64GB/dp/B08L8DV7BX/ref=sr_1_4?crid=37FL0ERN5R9C8&keywords=iphone&qid=1645259733&sprefix=iphones%2Caps%2C851&sr=8-4",
         price: 49900,
-        priceString: "₹",
+        priceString: "₹49,900",
         name: "Apple iPhone 11 (64GB) - Black",
         category: "mobiles",
         baseURL: "www.amazon.in",
@@ -191,7 +191,7 @@ export const data = [
     {
         productURL: "https://www.amazon.in/Apple-iPhone-13-Mini-128GB/dp/B09G99NBNQ/ref=sr_1_12?crid=37FL0ERN5R9C8&keywords=iphone&qid=1645259733&sprefix=iphones%2Caps%2C851&sr=8-12",
         price: 69900,
-        priceString: "₹69900",
+        priceString: "₹69,900",
         name: "Apple iPhone 13 Mini (128GB) - Blue",
         category: "mobiles",
         baseURL: "www.amazon.in",
@@ -209,7 +209,7 @@ export const data = [
     {
         productURL: "https://www.amazon.in/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=UTF8&adId=A01920472NDUDKZYPIKZ0&url=%2FOneOdio-Adapter-Free-Headphones-Professional-Telescopic%2Fdp%2FB07R2BNDMH%2Fref%3Dsr_1_1_sspa%3Fkeywords%3Dheadphone%25E0%25A4%2582%26qid%3D1645260101%26smid%3DA15HWISSD0WLIS%26sprefix%3Dheadph%252Caps%252C519%26sr%3D8-1-spons%26psc%3D1&qualifier=1645260101&id=117170417295477&widgetName=sp_atf",
         price: 2199,
-        priceString: "₹",
+        priceString: "₹2,199",
         name: "OneOdio Pro-10 Over Ear Headphones-Adapter Free Closed Back & Mixing DJ Stereo Headset with Hi-res Certification for AMP Computer Recording Phone Piano Guitar Laptop - Black Professional Studio Monitor Headphones ",
         category: "headphone",
         baseURL: "www.amazon.in",

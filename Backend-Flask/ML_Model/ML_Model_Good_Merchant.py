@@ -29,7 +29,7 @@ def process_image_binary(path):
 
 def predict_image(image, model):
     
-    products = ['earpods', 'headphones', 'laptop',
+    products = ['earpods', 'headphone', 'laptop',
                 'mobile', 'neckband', 'powerbank', 'tablet']
     
     vgg16 = keras.applications.vgg16.VGG16(
