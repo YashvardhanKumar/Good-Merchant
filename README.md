@@ -11,7 +11,8 @@ With the help of Good Merchant, you can now begin your journey towards saving mo
 
 
 # Hosted URL
-----If Hosted----
+
+Due to excess slug, not able to deploy
 
 # Features Implemented
 ## Frontend
