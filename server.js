@@ -13,7 +13,7 @@ const limiter = rateLimit({
 })
 
 // Apply the rate limiting middleware to all requests
-app.use(limiter)
+app.use('/', limiter)
 
 const app = express();
 const PORT = process.env.PORT || 3001;
