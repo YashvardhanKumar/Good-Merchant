@@ -82,7 +82,7 @@ function Popup(props) {
       body: formdata,
       redirect: 'follow'
     };
-    fetch("http://localhost:5000/qimageurl", requestOptions)
+    fetch("https://good-merchant-image-classifier.herokuapp.com/qimageurl", requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result)

@@ -4,14 +4,12 @@ import './App.light.css';
 import './App.dark.css';
 import React, { useState } from 'react'
 import Homepage from '../../Pages/Homepage/Homepage';
-import { Redirect, Route, Switch, useHistory } from 'react-router-dom'
-import { CategoriesPage } from '../../Pages/CategoriesPage/CategoriesPage';
+import { Route, Switch, useHistory } from 'react-router-dom'
 import Navbar from '../navbar/navbar';
 import Background from '../background/background';
 import Popup from '../PopUp/popup'
 import LoginPage from '../../Pages/LoginPage/LoginPage';
 import SignupPage from '../../Pages/SignupPage/SignupPage';
-import SearchResults from '../../Pages/SearchResults/SearchResults';
 import SearchPage from '../../Pages/SearchPage';
 
 
