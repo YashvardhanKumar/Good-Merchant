@@ -1,7 +1,6 @@
 import React from 'react'
 import { data } from './data';
 import styled from 'styled-components'
-import SearchBox from '../components/navbar/SearchBox/searchBox';
 
 
 const Container = styled.div`
