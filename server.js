@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static(path.resolve('build')));
 app.use(express.static(path.join(__dirname, "build")));
 // Creates weather endpoint
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.resolve('build', 'index.html'));
 });
 // console.log that your server is up and running
