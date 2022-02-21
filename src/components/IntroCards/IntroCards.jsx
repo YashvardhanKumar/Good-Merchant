@@ -10,7 +10,7 @@ function CardView() {
         <div className='card-container'>
             <div className="initial">
                 <div className='logo-card'>
-                    <img src={largelogodark} alt="" />
+                    <img src={largelogodark} width="100%" height="108" alt="" />
                 </div>
                 <div className='quote'>
                     Where you find the Best Price !!
