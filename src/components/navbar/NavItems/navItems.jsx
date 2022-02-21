@@ -26,7 +26,7 @@ function NavItems(props) {
 
             {(toggleMenu || screenWidth > 800) && (
                 <div className="nav-items">
-                    {(screenWidth < 600) ? <SearchBox toggleNav={props.toggleNav}/> : ""}
+                    {/* {(screenWidth < 600) ? <SearchBox toggleNav={props.toggleNav}/> : ""}
                     <Link className="content" to="/login">
                         Login
                     </Link>
@@ -34,7 +34,7 @@ function NavItems(props) {
                     </span>
                     <Link className="content" to="/signup">
                         Sign up
-                    </Link>
+                    </Link> */}
                 </div>
             )}
             <StyledButton className="responsive" onClick={toggleNav}>
