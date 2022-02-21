@@ -26,8 +26,8 @@ function NavItems(props) {
 
             {(toggleMenu || screenWidth > 800) && (
                 <div className="nav-items">
-                    {/* {(screenWidth < 600) ? <SearchBox toggleNav={props.toggleNav}/> : ""}
-                    <Link className="content" to="/login">
+                    {(screenWidth < 600) ? <SearchBox toggleNav={props.toggleNav}/> : ""}
+                    {/* <Link className="content" to="/login">
                         Login
                     </Link>
                     <span className="separator">
