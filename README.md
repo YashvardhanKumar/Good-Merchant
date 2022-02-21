@@ -5,6 +5,10 @@ But worry not, Good Merchant has got your back.
 All you need to do is paste the URL of an image of the electronic gadget you wish to buy, and our ML model will identify the item and give you the lowest price of it available on the internet.
 With the help of Good Merchant, you can now begin your journey towards saving money.
  
+# Github repository for Flask Model
+
+[Good Merchant ML Model](https://github.com/YashvardhanKumar/good-merchant-ml-model)
+ 
 # Screenshots
 ![image](https://user-images.githubusercontent.com/79046841/154858621-fbb3bb7e-6716-4e1d-b3f3-b664a72ea882.png)
 ![image](https://user-images.githubusercontent.com/79046841/154858669-905e2203-d3cd-44c6-9070-6cb2162b3aa9.png)
