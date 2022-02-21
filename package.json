@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild":"cd client && npm install && npm run build",
+    "heroku-postbuild":"npm install && npm run build",
     "frontend": "react-scripts start",
     "start-build": "npm run build && (cd server && npm start)",
     "ml": "cd Backend-Flask && flask run --no-debugger",
