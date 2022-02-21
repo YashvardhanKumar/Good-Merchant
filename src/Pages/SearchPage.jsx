@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-padding: 100px;
+padding: 100px 20px;
 // top: 100px;
 
 display: flex;
@@ -50,13 +50,14 @@ padding: 18px;
 background: rgba(7, 4, 48, 0.7);
 backdrop-filter: blur(30px);
 border-radius: 15px;
+width: 100%;
 `;
 const Wrapper = styled.div`
 display:flex;
 flex-wrap:wrap;
 align-items: center;
 justify-content: center;
-padding: 30px;
+// padding: 30px;
 `;
 
 const Cover = styled.div`
@@ -64,7 +65,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-width: 300px;
+max-width: 300px;
 
 margin: 10px;
 
