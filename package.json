@@ -33,8 +33,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild":"cd client && npm install && npm run build",
     "frontend": "react-scripts start",
-    "start": "npm run build && (cd server && npm start)",
+    "start-build": "npm run build && (cd server && npm start)",
     "ml": "cd Backend-Flask && flask run --no-debugger",
     "backend": "cd Backend-Express && nodemon app.js",
     "build": "react-scripts build",
