@@ -16,7 +16,7 @@ With the help of Good Merchant, you can now begin your journey towards saving mo
 
 # Hosted URL
 
-[Good Merchant Link](https://goodmerchant.herokuapp.com/)
+[Good Merchant Link (Down)](https://goodmerchant.herokuapp.com/)
 
 # Features Implemented
 ## Frontend
